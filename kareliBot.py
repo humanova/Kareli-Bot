@@ -23,7 +23,7 @@ client = commands.Bot(command_prefix = "!")
 version = "kareliBot v0.1\n31.07.18"
 myID = "213262071050141696"
 botID = "473890180215078925"
-mcIconURL = "http://s857.photobucket.com/user/TangentSystem/media/MCicon2.png.html?t=1262414710"
+mcIconURL = "http://puu.sh/B6mwA/7705aad6e4.png"
 
 def yaziDuzelt(yazi):
     return int(''.join(list(filter(str.isdigit, yazi))))
