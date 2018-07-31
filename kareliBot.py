@@ -23,6 +23,7 @@ client = commands.Bot(command_prefix = "!")
 version = "kareliBot v0.1\n31.07.18"
 myID = "213262071050141696"
 botID = "473890180215078925"
+mcIconURL = "http://s857.photobucket.com/user/TangentSystem/media/MCicon2.png.html?t=1262414710"
 
 def yaziDuzelt(yazi):
     return int(''.join(list(filter(str.isdigit, yazi))))
@@ -50,7 +51,7 @@ async def on_message(message):
                     ms.version = "1.10.2"
 
                 embed=discord.Embed(title=" ", color=0x75df00)
-                embed.set_author(name="genco.me Server Durumu", icon_url=client.user.avatar_url)
+                embed.set_author(name="genco.me Server Durumu", icon_url=mcIconURL)
                 embed.add_field(name="Online :", value="✅Evet", inline=True)
                 embed.add_field(name="Versiyon :", value=str(ms.version),inline= True)
                 embed.add_field(name="Oyuncu Sayısı :", value=str(ms.current_players) + " / " + str(ms.max_players) ,inline= False)
@@ -58,9 +59,10 @@ async def on_message(message):
 
             else:
                 embed=discord.Embed(title=" ", color=0x75df00)
-                embed.set_author(name="genco.me Server Durumu", icon_url=client.user.avatar_url)
+                embed.set_author(name="genco.me Server Durumu", icon_url=mcIconURL)
                 embed.add_field(name="Online :", value="❌Hayır", inline=True)
                 await client.send_message(message.channel,embed=embed)
+        
                 
 token = os.environ['BOT_TOKEN']
 client.run(token)
